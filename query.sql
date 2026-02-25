@@ -118,6 +118,8 @@ CREATE TABLE cart (
         REFERENCES users(id_user)
         ON DELETE CASCADE
 );
+INSERT INTO cart (id_user) VALUES
+(1),(2),(3),(4),(5);
 
 
 CREATE TABLE cart_item (
