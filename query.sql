@@ -197,6 +197,17 @@ CREATE TABLE detail_order (
         REFERENCES product(id_product)
         ON DELETE SET NULL
 );
+INSERT INTO detail_order (id_order, id_product, product_name, variant_name, quantity, price) VALUES
+(1, 1, 'Espresso', 'Hot', 1, 20000),
+(1, 2, 'Cappuccino', 'Ice', 1, 27000),
+(2, 4, 'Matcha Latte', 'Ice', 1, 30000),
+(3, 7, 'Chicken Wings', NULL, 1, 35000),
+(4, 8, 'Cheesecake', NULL, 1, 32000),
+(5, 10, 'Caramel Macchiato', 'Large', 1, 38000),
+(2, 3, 'Latte', 'Hot', 1, 27000),
+(3, 5, 'Chocolate', 'Hot', 1, 28000),
+(4, 9, 'Brownies', NULL, 1, 25000),
+(5, 6, 'French Fries', NULL, 1, 22000);
 
 
 CREATE TABLE payment (
