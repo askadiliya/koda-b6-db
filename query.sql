@@ -73,7 +73,17 @@ CREATE TABLE product_variant (
         REFERENCES product(id_product)
         ON DELETE CASCADE
 );
-
+INSERT INTO product_variant (id_product, variant_name, additional_price) VALUES
+(1, 'Hot', 0),
+(1, 'Ice', 2000),
+(2, 'Hot', 0),
+(2, 'Ice', 2000),
+(3, 'Hot', 0),
+(4, 'Ice', 0),
+(5, 'Hot', 0),
+(10, 'Large', 5000),
+(10, 'Medium', 2000),
+(3, 'Large', 4000);
 
 CREATE TABLE product_image (
     id_image SERIAL PRIMARY KEY,
