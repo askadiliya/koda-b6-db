@@ -144,6 +144,17 @@ CREATE TABLE cart_item (
         REFERENCES product_variant(id_variant)
         ON DELETE SET NULL
 );
+INSERT INTO cart_item (id_cart, id_product, id_variant, quantity) VALUES
+(1, 1, 1, 2),
+(1, 2, 3, 1),
+(2, 3, 5, 1),
+(2, 4, 6, 2),
+(3, 5, 7, 1),
+(3, 6, NULL, 3),
+(4, 7, NULL, 1),
+(4, 8, NULL, 2),
+(5, 9, NULL, 1),
+(5, 10, 8, 1);
 
 
 CREATE TABLE orders (
