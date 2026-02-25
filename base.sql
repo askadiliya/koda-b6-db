@@ -41,7 +41,7 @@ CREATE TABLE product (
     base_price NUMERIC(12,2) NOT NULL,
     description TEXT,
     stock INT DEFAULT 0,
-    is_active BOOLEAN DEFAULT TRUE,
+    is_active BOOLEAN DEFAULT TRUE,                                                                                                                                                                                      
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT fk_product_category
