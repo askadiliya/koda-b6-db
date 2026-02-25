@@ -249,3 +249,14 @@ CREATE TABLE review (
         REFERENCES product(id_product)
         ON DELETE CASCADE
 );
+INSERT INTO review (id_user, id_product, rating, comment) VALUES
+(1, 1, 5, 'Espresso sangat enak!'),
+(2, 2, 4, 'Cappuccino creamy banget'),
+(3, 3, 5, 'Latte favorit saya'),
+(4, 4, 4, 'Matcha nya mantap'),
+(5, 5, 5, 'Chocolate hangat nikmat'),
+(6, 6, 3, 'Fries cukup oke'),
+(7, 7, 5, 'Wings pedas mantap'),
+(8, 8, 4, 'Cheesecake lembut'),
+(9, 9, 4, 'Brownies legit'),
+(10, 10, 5, 'Macchiato terbaik!');
