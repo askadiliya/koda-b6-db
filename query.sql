@@ -8,6 +8,17 @@ CREATE TABLE users (
     role VARCHAR(50),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+INSERT INTO users (name, email, phone, address, photo, role) VALUES
+('Andi Pratama', 'andi@email.com', '0811111111', 'Jakarta', 'andi.jpg', 'customer'),
+('Budi Santoso', 'budi@email.com', '0811111112', 'Bandung', 'budi.jpg', 'customer'),
+('Citra Lestari', 'citra@email.com', '0811111113', 'Surabaya', 'citra.jpg', 'customer'),
+('Dewi Anggraini', 'dewi@email.com', '0811111114', 'Yogyakarta', 'dewi.jpg', 'customer'),
+('Eko Saputra', 'eko@email.com', '0811111115', 'Semarang', 'eko.jpg', 'customer'),
+('Fajar Nugroho', 'fajar@email.com', '0811111116', 'Malang', 'fajar.jpg', 'admin'),
+('Gina Maharani', 'gina@email.com', '0811111117', 'Bekasi', 'gina.jpg', 'customer'),
+('Hadi Wijaya', 'hadi@email.com', '0811111118', 'Depok', 'hadi.jpg', 'customer'),
+('Intan Permata', 'intan@email.com', '0811111119', 'Bogor', 'intan.jpg', 'customer'),
+('Joko Susilo', 'joko@email.com', '0811111120', 'Tangerang', 'joko.jpg', 'customer');
 
 
 CREATE TABLE category (
