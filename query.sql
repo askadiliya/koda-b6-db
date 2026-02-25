@@ -129,3 +129,18 @@ CREATE TABLE detail_order (
         REFERENCES product(id_product)
         ON DELETE SET NULL
 );
+
+
+CREATE TABLE payment (
+    id_payment SERIAL PRIMARY KEY,
+    id_order INT UNIQUE NOT NULL,
+    method VARCHAR(50) NOT NULL,
+    amount NUMERIC(12,2) NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    paid_at TIMESTAMP,
+
+    CONSTRAINT fk_payment_order
+        FOREIGN KEY (id_order)
+        REFERENCES orders(id_order)
+        ON DELETE CASCADE
+);
