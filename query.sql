@@ -26,6 +26,12 @@ CREATE TABLE category (
     category_name VARCHAR(100) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+INSERT INTO category (category_name) VALUES
+('Coffee'),
+('Non Coffee'),
+('Snack'),
+('Dessert'),
+('Signature');
 
 
 CREATE TABLE product (
