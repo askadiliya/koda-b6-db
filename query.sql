@@ -93,3 +93,18 @@ CREATE TABLE cart_item (
         REFERENCES product_variant(id_variant)
         ON DELETE SET NULL
 );
+
+
+CREATE TABLE orders (
+    id_order SERIAL PRIMARY KEY,
+    id_user INT NOT NULL,
+    order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    subtotal NUMERIC(12,2) NOT NULL,
+    total_amount NUMERIC(12,2) NOT NULL,
+    status VARCHAR(50) NOT NULL,
+
+    CONSTRAINT fk_order_user
+        FOREIGN KEY (id_user)
+        REFERENCES users(id_user)
+        ON DELETE CASCADE
+);
