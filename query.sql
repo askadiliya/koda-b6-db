@@ -170,6 +170,12 @@ CREATE TABLE orders (
         REFERENCES users(id_user)
         ON DELETE CASCADE
 );
+INSERT INTO orders (id_user, subtotal, total_amount, status) VALUES
+(1, 45000, 47000, 'Paid'),
+(2, 30000, 32000, 'Paid'),
+(3, 35000, 37000, 'Pending'),
+(4, 32000, 34000, 'Paid'),
+(5, 33000, 35000, 'Paid');
 
 
 CREATE TABLE detail_order (
