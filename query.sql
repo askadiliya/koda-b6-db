@@ -223,6 +223,12 @@ CREATE TABLE payment (
         REFERENCES orders(id_order)
         ON DELETE CASCADE
 );
+INSERT INTO payment (id_order, method, amount, status, paid_at) VALUES
+(1, 'QRIS', 47000, 'Success', NOW()),
+(2, 'Cash', 32000, 'Success', NOW()),
+(3, 'Transfer', 37000, 'Pending', NULL),
+(4, 'Debit Card', 34000, 'Success', NOW()),
+(5, 'QRIS', 35000, 'Success', NOW());
 
 
 CREATE TABLE review (
