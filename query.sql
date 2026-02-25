@@ -144,3 +144,23 @@ CREATE TABLE payment (
         REFERENCES orders(id_order)
         ON DELETE CASCADE
 );
+
+
+CREATE TABLE review (
+    id_review SERIAL PRIMARY KEY,
+    id_user INT NOT NULL,
+    id_product INT NOT NULL,
+    rating INT CHECK (rating BETWEEN 1 AND 5),
+    comment TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT fk_review_user
+        FOREIGN KEY (id_user)
+        REFERENCES users(id_user)
+        ON DELETE CASCADE,
+
+    CONSTRAINT fk_review_product
+        FOREIGN KEY (id_product)
+        REFERENCES product(id_product)
+        ON DELETE CASCADE
+);
