@@ -69,3 +69,27 @@ CREATE TABLE cart (
         REFERENCES users(id_user)
         ON DELETE CASCADE
 );
+
+
+CREATE TABLE cart_item (
+    id_cart_item SERIAL PRIMARY KEY,
+    id_cart INT NOT NULL,
+    id_product INT NOT NULL,
+    id_variant INT,
+    quantity INT NOT NULL CHECK (quantity > 0),
+
+    CONSTRAINT fk_cartitem_cart
+        FOREIGN KEY (id_cart)
+        REFERENCES cart(id_cart)
+        ON DELETE CASCADE,
+
+    CONSTRAINT fk_cartitem_product
+        FOREIGN KEY (id_product)
+        REFERENCES product(id_product)
+        ON DELETE CASCADE,
+
+    CONSTRAINT fk_cartitem_variant
+        FOREIGN KEY (id_variant)
+        REFERENCES product_variant(id_variant)
+        ON DELETE SET NULL
+);
