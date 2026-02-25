@@ -49,6 +49,17 @@ CREATE TABLE product (
         REFERENCES category(id_category)
         ON DELETE CASCADE
 );
+INSERT INTO product (id_category, product_name, base_price, description, stock) VALUES
+(1, 'Espresso', 20000, 'Strong black coffee', 100),
+(1, 'Cappuccino', 25000, 'Coffee with milk foam', 80),
+(1, 'Latte', 27000, 'Smooth milk coffee', 90),
+(2, 'Matcha Latte', 30000, 'Japanese green tea latte', 70),
+(2, 'Chocolate', 28000, 'Hot chocolate drink', 60),
+(3, 'French Fries', 22000, 'Crispy fries', 50),
+(3, 'Chicken Wings', 35000, 'Spicy wings', 40),
+(4, 'Cheesecake', 32000, 'Creamy cheesecake', 30),
+(4, 'Brownies', 25000, 'Chocolate brownies', 45),
+(5, 'Caramel Macchiato', 33000, 'Sweet caramel coffee', 75);
 
 
 CREATE TABLE product_variant (
