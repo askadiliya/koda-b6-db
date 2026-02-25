@@ -57,3 +57,15 @@ CREATE TABLE product_image (
         REFERENCES product(id_product)
         ON DELETE CASCADE
 );
+
+
+CREATE TABLE cart (
+    id_cart SERIAL PRIMARY KEY,
+    id_user INT UNIQUE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT fk_cart_user
+        FOREIGN KEY (id_user)
+        REFERENCES users(id_user)
+        ON DELETE CASCADE
+);
