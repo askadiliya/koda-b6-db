@@ -32,3 +32,16 @@ CREATE TABLE product (
         REFERENCES category(id_category)
         ON DELETE CASCADE
 );
+
+
+CREATE TABLE product_variant (
+    id_variant SERIAL PRIMARY KEY,
+    id_product INT NOT NULL,
+    variant_name VARCHAR(100) NOT NULL,
+    additional_price NUMERIC(12,2) DEFAULT 0,
+
+    CONSTRAINT fk_variant_product
+        FOREIGN KEY (id_product)
+        REFERENCES product(id_product)
+        ON DELETE CASCADE
+);
