@@ -108,3 +108,24 @@ CREATE TABLE orders (
         REFERENCES users(id_user)
         ON DELETE CASCADE
 );
+
+
+CREATE TABLE detail_order (
+    id_detail_order SERIAL PRIMARY KEY,
+    id_order INT NOT NULL,
+    id_product INT NOT NULL,
+    product_name VARCHAR(150) NOT NULL,
+    variant_name VARCHAR(100),
+    quantity INT NOT NULL CHECK (quantity > 0),
+    price NUMERIC(12,2) NOT NULL,
+
+    CONSTRAINT fk_detailorder_order
+        FOREIGN KEY (id_order)
+        REFERENCES orders(id_order)
+        ON DELETE CASCADE,
+
+    CONSTRAINT fk_detailorder_product
+        FOREIGN KEY (id_product)
+        REFERENCES product(id_product)
+        ON DELETE SET NULL
+);
