@@ -45,3 +45,15 @@ CREATE TABLE product_variant (
         REFERENCES product(id_product)
         ON DELETE CASCADE
 );
+
+
+CREATE TABLE product_image (
+    id_image SERIAL PRIMARY KEY,
+    id_product INT NOT NULL,
+    image_path TEXT NOT NULL,
+
+    CONSTRAINT fk_image_product
+        FOREIGN KEY (id_product)
+        REFERENCES product(id_product)
+        ON DELETE CASCADE
+);
