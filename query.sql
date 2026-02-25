@@ -95,6 +95,17 @@ CREATE TABLE product_image (
         REFERENCES product(id_product)
         ON DELETE CASCADE
 );
+INSERT INTO product_image (id_product, image_path) VALUES
+(1, 'espresso.jpg'),
+(2, 'cappuccino.jpg'),
+(3, 'latte.jpg'),
+(4, 'matcha.jpg'),
+(5, 'chocolate.jpg'),
+(6, 'fries.jpg'),
+(7, 'wings.jpg'),
+(8, 'cheesecake.jpg'),
+(9, 'brownies.jpg'),
+(10, 'macchiato.jpg');
 
 
 CREATE TABLE cart (
