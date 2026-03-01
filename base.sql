@@ -61,6 +61,18 @@ INSERT INTO product (id_category, product_name, base_price, description, stock) 
 (4, 'Brownies', 25000, 'Chocolate brownies', 45),
 (5, 'Caramel Macchiato', 33000, 'Sweet caramel coffee', 75);
 
+INSERT INTO product (id_category, product_name, base_price, description, stock) VALUES
+(3, 'Beef Burger', 45000, 'Juicy grilled beef burger with lettuce and cheese', 55),
+(3, 'Spaghetti Bolognese', 40000, 'Pasta with rich beef tomato sauce', 48),
+(3, 'Grilled Chicken Sandwich', 38000, 'Toasted sandwich with grilled chicken and mayo', 60),
+(3, 'Fish and Chips', 42000, 'Crispy fried fish with potato chips', 35),
+(3, 'Beef Kebab', 39000, 'Middle eastern style beef kebab wrap', 50),
+(4, 'Tiramisu', 34000, 'Italian coffee-flavored dessert', 25),
+(4, 'Apple Pie', 30000, 'Classic baked apple pie with cinnamon', 28),
+(4, 'Pancakes', 27000, 'Fluffy pancakes with maple syrup', 45),
+(4, 'Garlic Bread', 20000, 'Toasted bread with garlic butter', 70),
+(4, 'Onion Rings', 23000, 'Crispy deep-fried onion rings', 65);
+
 
 CREATE TABLE product_variant (
     id_variant SERIAL PRIMARY KEY,
