@@ -85,6 +85,18 @@ INSERT INTO product (id_category, product_name, base_price, description, stock) 
 (2, 'Dragon Fruit Juice', 27000, 'Vibrant dragon fruit juice', 58),
 (2, 'Mixed Berry Juice', 29000, 'Blend of assorted berries', 50);
 
+INSERT INTO product (id_category, product_name, base_price, description, stock) VALUES
+(2, 'Green Detox Smoothie', 32000, 'Blend of spinach, apple, and banana for detox', 40),
+(2, 'Chia Seed Drink', 28000, 'Refreshing drink with soaked chia seeds and honey', 55),
+(2, 'Lemon Honey Water', 18000, 'Warm lemon water with natural honey', 80),
+(2, 'Ginger Turmeric Shot', 22000, 'Immunity booster with ginger and turmeric', 60),
+(2, 'Cucumber Mint Infused Water', 20000, 'Fresh cucumber and mint infused drink', 75),
+(2, 'Almond Milk', 26000, 'Dairy-free homemade almond milk', 50),
+(2, 'Oat Milk Latte', 30000, 'Healthy latte made with oat milk', 45),
+(2, 'Herbal Tea Mix', 24000, 'Blend of natural herbs for relaxation', 65),
+(2, 'Beetroot Juice', 27000, 'Fresh beetroot juice rich in antioxidants', 48),
+(2, 'Celery Detox Drink', 29000, 'Pure celery juice for body cleansing', 35);
+
 
 CREATE TABLE product_variant (
     id_variant SERIAL PRIMARY KEY,
