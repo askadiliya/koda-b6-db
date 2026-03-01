@@ -97,6 +97,18 @@ INSERT INTO product (id_category, product_name, base_price, description, stock) 
 (2, 'Beetroot Juice', 27000, 'Fresh beetroot juice rich in antioxidants', 48),
 (2, 'Celery Detox Drink', 29000, 'Pure celery juice for body cleansing', 35);
 
+INSERT INTO product (id_category, product_name, base_price, description, stock) VALUES
+(3, 'Nachos Cheese', 30000, 'Crispy tortilla chips with melted cheese sauce', 55),
+(3, 'Chicken Nuggets', 28000, 'Golden fried chicken nuggets', 70),
+(3, 'Mozzarella Sticks', 32000, 'Fried mozzarella sticks with marinara sauce', 50),
+(3, 'Mini Sausage Roll', 26000, 'Bite-sized sausage wrapped in pastry', 60),
+(3, 'Popcorn Chicken', 29000, 'Crunchy bite-sized fried chicken', 65),
+(3, 'Spring Rolls', 25000, 'Crispy vegetable spring rolls', 58),
+(3, 'Potato Wedges', 24000, 'Seasoned baked potato wedges', 62),
+(3, 'Chicken Quesadilla', 35000, 'Grilled tortilla filled with chicken and cheese', 45),
+(3, 'Mini Pizza', 33000, 'Small pizza with assorted toppings', 40),
+(3, 'Fried Tofu Bites', 22000, 'Crispy fried tofu with dipping sauce', 75);
+
 
 CREATE TABLE product_variant (
     id_variant SERIAL PRIMARY KEY,
