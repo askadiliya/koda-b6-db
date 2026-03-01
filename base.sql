@@ -73,6 +73,18 @@ INSERT INTO product (id_category, product_name, base_price, description, stock) 
 (4, 'Garlic Bread', 20000, 'Toasted bread with garlic butter', 70),
 (4, 'Onion Rings', 23000, 'Crispy deep-fried onion rings', 65);
 
+INSERT INTO product (id_category, product_name, base_price, description, stock) VALUES
+(2, 'Orange Juice', 24000, 'Fresh squeezed orange juice', 70),
+(2, 'Mango Juice', 26000, 'Sweet tropical mango juice', 65),
+(2, 'Avocado Juice', 28000, 'Creamy blended avocado juice', 60),
+(2, 'Strawberry Juice', 25000, 'Fresh strawberry blended drink', 68),
+(2, 'Watermelon Juice', 23000, 'Refreshing watermelon juice', 75),
+(2, 'Pineapple Juice', 24000, 'Tangy pineapple juice', 72),
+(2, 'Guava Juice', 22000, 'Sweet pink guava juice', 66),
+(2, 'Apple Juice', 23000, 'Fresh apple pressed juice', 64),
+(2, 'Dragon Fruit Juice', 27000, 'Vibrant dragon fruit juice', 58),
+(2, 'Mixed Berry Juice', 29000, 'Blend of assorted berries', 50);
+
 
 CREATE TABLE product_variant (
     id_variant SERIAL PRIMARY KEY,
